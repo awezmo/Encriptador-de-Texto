@@ -1,0 +1,154 @@
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html>
+    <style>
+	
+body{
+background-color: lightblue;
+}
+h1{
+margin-left: 25%;
+font-family: Courier New;
+}
+
+textarea{
+	width: 100%;
+	height: 75%;
+	resize: none;
+}
+
+#tex{
+	width: 100%;
+	height: 75%;
+	margin-left: 0px;
+	resize: none;
+	background-color:rgb(232, 242, 255)
+}
+
+#enc{
+	width: 100%;
+	height: 75%;
+	margin-left:29%;
+	resize: none;
+	background-color:rgb(232, 242, 255)
+}
+.enlinea{
+	display: inline-block;
+}
+	
+.button { 
+border: none;
+color: lightblue;
+padding: 16px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+transition-duration: 0.4s;
+cursor: pointer;
+}
+
+.button1 {
+  background-color:rgb(232, 242, 255); 
+  color: black; 
+  border: 2px solid #008CBA;
+  border-radius: 8px;
+  margin-left:42%;
+  font-family: Courier New;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+  border-radius: 8px;
+  font-family: Courier New;
+}
+
+.button2 {
+  background-color:rgb(232, 242, 255); 
+  color: black; 
+  border: 2px solid #008CBA;
+  border-radius: 8px;
+  font-family: Courier New;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+  border-radius: 8px;
+  font-family: Courier New;
+}
+
+.button3 {
+  background-color:rgb(232, 242, 255); 
+  color: black; 
+  border: 2px solid #008CBA;
+  border-radius: 8px;
+  font-family: Courier New;
+}
+
+.button3:hover {
+  background-color: #008CBA;
+  color: white;
+  border-radius: 8px;
+  font-family: Courier New;
+}
+    </style>
+<body>
+
+<h1>
+ENCRIPTADOR DE TEXTO
+</h1>	
+<div class="enlinea">
+<form name="texto">
+  <p><label for="tex"></label></p>
+  <textarea id="tex" name="tex" rows="5" cols="50" placeholder="Ingrese el texto aquí"></textarea>
+</form>
+</div>
+
+<div class="enlinea">
+<form name="encriptado">
+  <p><label for="enc"></label></p>
+  <textarea id="enc" name="enc" rows="5" cols="50" placeholder="Aquí verá el texto encriptado" readonly></textarea>
+</form>
+</div>
+
+<br>
+
+<button class="button button2" type="button" onclick="encriptadoo()">Encriptar</button>
+
+<button class="button button3" type="button" onclick="desencriptado()">Desencriptar</button>
+
+<button class="button button1" type="button" onclick="copiar()">Copiar</button>
+<br>
+<br>
+<br>
+
+<address>
+Challenge ONE Grupo 2.<br>
+Escrito por <a href="sebasosa9457@gmail.com">Sebastián Sosa</a>.<br>
+Argentina.
+</address>
+
+<script>
+function encriptadoo(){
+var texi = document.getElementById('tex');
+var enci = document.getElementById('enc');
+enci.value = texi.value.replace(/e/g, "enter").replace(/o/g,"ober").replace(/i/g,"imes").replace(/a/g,"ai").replace(/u/g,"ufat");
+}
+function desencriptado(){
+var texi = document.getElementById('tex');
+var enci = document.getElementById('enc');
+enci.value = tex.value.replace(/enter/g, "e").replace(/ober/g,"o").replace(/imes/g,"i").replace(/ai/g,"a").replace(/ufat/g,"u");
+}
+function copiar(){
+    var copTex = document.getElementById('enc');
+	copTex.select();
+	navigator.clipboard.writeText(copTex.value);
+}
+</script>
+
+
+</body>
+</html>
